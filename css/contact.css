@@ -1,106 +1,109 @@
-@import url(http://fonts.googleapis.com/css?family=Allura);
-@import url(http://weloveiconfonts.com/api/?family=entypo);
+@charset "utf-8";
+/* CSS Document */
 
-/* entypo */
-[class*="entypo-"]:before {
-  font-family: 'entypo', sans-serif;
+/* ---------- FONTAWESOME ---------- */
+/* ---------- http://fortawesome.github.com/Font-Awesome/ ---------- */
+/* ---------- http://weloveiconfonts.com/ ---------- */
+
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+
+/* ---------- ERIC MEYER'S RESET CSS ---------- */
+/* ---------- http://meyerweb.com/eric/tools/css/reset/ ---------- */
+
+@import url(http://meyerweb.com/eric/tools/css/reset/reset.css);
+
+/* ---------- FONTAWESOME ---------- */
+
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
 }
 
-body{
-margin: 0;
-padding: 1em;
-background-color: #000000;
+/* ---------- GENERAL ---------- */
+
+body {
+	background-color: #798498;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	line-height: 1.5em;
 }
-.title{
-  font-family: 'Allura', cursive;
-  font-weight: 400;
-  color: #999;
-  font-size: 4em;
-  text-align: center;
-  margin: 0;
-  padding: 0.8em 0;
-  @include text-shadow(0px 0px 5px black);
+
+a { text-decoration: none; }
+
+.float-left { float: left; }
+.float-right { float: right; }
+
+.clearfix { *zoom: 1; }
+.clearfix:before, .clearfix:after {
+	display: table;
+	content: "";
 }
-.container{
-  padding:0;
-  margin: 0 auto;
-  width: 410px;
- }
-.ribbon{
-  float: left;
-  @include appearance(none);
-  @include border-radius(5px 5px 0px 0px);
-  @include transition(all 0.2s ease);
-  cursor: pointer;
-  border: none;
-  background: blue;
-  width: 150px;
-  height: 250px;
-  position: relative;
-  color: white;
-  padding: 5px;
-  margin-right: -20px;
-  -webkit-filter: drop-shadow(0 1px 10px rgba(0,0,0,.5));
-		-moz-filter: drop-shadow(0 1px 10px rgba(0,0,0,.5));
-		-ms-filter: drop-shadow(0 1px 10px rgba(0,0,0,.5));
-		-o-filter: drop-shadow(0 1px 10px rgba(0,0,0,.5));
-		filter: drop-shadow(0 1px 10px rgba(0,0,0,.5));
-&:hover{
-  margin-top: 20px;
-  color:white;
+.clearfix:after { clear: both; }
+
+
+/* ---------- NAVIGATION ---------- */
+
+nav {
+	margin: 50px auto;
+	width: 60px;
 }
-span{
-line-height: 20px;
-font-size: 5em;
-  }
-&::before{
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 0; 
-  	height: 0; 
-  	border-top: 50px solid blue; 
-  	border-right: 100px solid transparent;
- }
-&::after{
-    content: '';
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 0; 
-  	height: 0; 
-  	border-top: 50px solid blue; 
-  	border-left: 100px solid transparent;
- }
+
+nav ul {
+	background-color: #505664;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	display: inline-table;
+	position: relative;
 }
-.facebook{
-  margin-top: 10px;
-  background: #3b5998;
-  color: darken(#3b5998, 20%);
-  &::after{border-top-color: #3b5998}
-  &::before{border-top-color: #3b5998}
-  }
-.linkedin{
-  z-index: 999;
-  background:#c4302b;
-  color: darken(#c4302b, 20%);
-  &::after{border-top-color: #c4302b}
-  &::before{border-top-color: #c4302b}
-  }
-.twitter{
-  margin-top: 10px;
-  background: #00a0d1;
-  color: darken(#00a0d1, 20%);
-  &::after{border-top-color: #00a0d1}
-  &::before{border-top-color: #00a0d1}
-  }
-#author{
-  font-family: 'Allura', cursive;
-  position: absolute;
-  bottom: 25px;
-  right: 40px;
-  color: #999;
-  font-size: 2em;
-  
-  }
+
+nav ul li {
+	float: left;
+}
+
+nav ul li a {
+	color: #6daeb0;
+	display: block;
+	height: 45px;
+	line-height: 45px;
+	text-align: center;
+	width: 60px;
+}
+
+nav ul li a:hover{
+	color: #fff;
+}
+
+nav ul li ul {
+	background-color: #6daeb0;
+	margin-top: 20px;
+	padding: 5px 0;
+	position: absolute;
+}
+
+nav ul li ul:before {
+	background-color: #6daeb0;
+	content: "";
+	display: block;
+	height: 8px;
+	left: 26px; /* (nav ul li a { width: 60px; } / 2) - (nav ul li ul:before { width: 8px; } / 2) */
+	position: absolute;
+	top: -4px;
+	transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	width: 8px;
+	z-index: -1;
+}
+
+nav ul li ul li {
+	float: none;
+}
+
+nav ul li ul li a {
+	color: #fff;
+}
+
+nav ul li ul li a:hover {
+	background-color: #5d9799;
+}
