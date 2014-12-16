@@ -20,12 +20,31 @@
 
 /* ---------- GENERAL ---------- */
 
+h1 {
+font-family: calibri, sans-serif;
+font-color: #ffbd55;
+font-size: 24px;
+text-align: center;
+
+}
+
+head {
+background: url("/img/social%203.jpg");
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 480px;
+  height: 360px;
+    
+}
 body {
-	background-color: #798498;
+	background-color: #e3e3e3;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 16px;
 	line-height: 1.5em;
+    font-color: #ffbd55;
 }
+
 
 a { text-decoration: none; }
 
@@ -48,7 +67,7 @@ nav {
 }
 
 nav ul {
-	background-color: #505664;
+	background-color: #ffbd55;
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -61,7 +80,7 @@ nav ul li {
 }
 
 nav ul li a {
-	color: #6daeb0;
+	color: #fff;
 	display: block;
 	height: 45px;
 	line-height: 45px;
@@ -74,14 +93,14 @@ nav ul li a:hover{
 }
 
 nav ul li ul {
-	background-color: #6daeb0;
+	background-color: #ffbd55;
 	margin-top: 20px;
 	padding: 5px 0;
 	position: absolute;
 }
 
 nav ul li ul:before {
-	background-color: #6daeb0;
+	background-color: #ffbd55;
 	content: "";
 	display: block;
 	height: 8px;
@@ -105,5 +124,5 @@ nav ul li ul li a {
 }
 
 nav ul li ul li a:hover {
-	background-color: #5d9799;
+	background-color: #404040;
 }

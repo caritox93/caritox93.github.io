@@ -4,7 +4,7 @@
     padding: 0; 
 
 
-header {
+*header {
 	height: 100px;
     text-align: center;
     font-family: century gothic, sans-serif;
@@ -16,12 +16,11 @@ header {
 h1 {
     font-family: century gothic, sans-serif;
     text-align: center;
-    font-color; #000000;
+    font-color: #000000;
     font-size: 22px;
-    
-}
+    }
 
-#banner {
+*banner {
 	width: 100%;
     text-align: bottom;
 	height: 500px;
@@ -31,7 +30,7 @@ h1 {
     background-size: cover;
 }
 
-#content {
+*content {
 	width: 100%;
     text-align: center;
 	position: cover;
